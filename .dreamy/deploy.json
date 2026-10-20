@@ -45,7 +45,8 @@
     {
       "slug": "custom",
       "root": "custom",
-      "serve": "nginx -g 'daemon off;'"
+      "serve": "nginx -g 'daemon off;'",
+      "context": "."
     },
     {
       "slug": "rofs",
