@@ -1,0 +1,1 @@
+{ "name": "rofs", "private": true, "scripts": { "start": "node server.js" } }
