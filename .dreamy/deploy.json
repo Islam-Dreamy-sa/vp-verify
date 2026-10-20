@@ -1,13 +1,51 @@
 {
   "version": 1,
   "apps": [
-    { "slug": "static", "root": "static", "build": "npm install && npm run build", "static": "dist" },
-    { "slug": "node", "root": "node", "install": "npm install", "serve": "npm start" },
-    { "slug": "next", "root": "next", "build": "npm install && npm run build", "serve": "npx next start -p $PORT" },
-    { "slug": "python", "root": "python", "install": "pip install -r requirements.txt", "serve": "python -m uvicorn main:app --host 0.0.0.0 --port $PORT" },
-    { "slug": "go", "root": "go", "serve": "go run ." },
-    { "slug": "php", "root": "php", "serve": "php -S 0.0.0.0:$PORT -t public" },
-    { "slug": "custom", "root": "custom", "serve": "nginx -g 'daemon off;'" },
-    { "slug": "rofs", "root": "rofs", "install": "npm install", "serve": "npm start" }
+    {
+      "slug": "static",
+      "root": "static",
+      "build": "npm install && npm run build",
+      "static": "dist"
+    },
+    {
+      "slug": "node",
+      "root": "node",
+      "install": "npm install",
+      "serve": "npm start",
+      "migrate": "node migrate.js"
+    },
+    {
+      "slug": "next",
+      "root": "next",
+      "build": "npm install && npm run build",
+      "serve": "npx next start -p $PORT"
+    },
+    {
+      "slug": "python",
+      "root": "python",
+      "install": "pip install -r requirements.txt",
+      "serve": "python -m uvicorn main:app --host 0.0.0.0 --port $PORT"
+    },
+    {
+      "slug": "go",
+      "root": "go",
+      "serve": "go run ."
+    },
+    {
+      "slug": "php",
+      "root": "php",
+      "serve": "php -S 0.0.0.0:$PORT -t public"
+    },
+    {
+      "slug": "custom",
+      "root": "custom",
+      "serve": "nginx -g 'daemon off;'"
+    },
+    {
+      "slug": "rofs",
+      "root": "rofs",
+      "install": "npm install",
+      "serve": "npm start"
+    }
   ]
 }
