@@ -12,7 +12,13 @@
       "root": "node",
       "install": "npm install",
       "serve": "npm start",
-      "migrate": "node migrate.js"
+      "migrate": "node migrate.js",
+      "env": [
+        {
+          "name": "DATABASE_URL",
+          "kind": "database"
+        }
+      ]
     },
     {
       "slug": "next",
